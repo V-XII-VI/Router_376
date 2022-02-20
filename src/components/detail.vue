@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h1>Product Detail</h1>
+    <h1>ความหมายของดอกไม้</h1>
     <h3>{{ productid }}</h3>
   </v-container>
 </template>

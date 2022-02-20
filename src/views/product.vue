@@ -1,21 +1,25 @@
 <template>
   <v-container>
-    <center><h1>HUNTER SHOP</h1></center>
+    <center><h1>Flower Shop</h1></center>
     <v-container class="d-flex flex-wrap">
       <v-card
         class="mx-auto mb-12"
-        max-width="500"
+        max-width="800"
         v-for="(i, index) in productlist"
         :key="index"
       >
-        <v-img class="white--text align-end" height="500px" :src="i.imageurl">
+        <v-img class="white--text align-end" height="800px" :src="i.imageurl">
         </v-img>
-        
+
         <v-card-text class="text--primary">
-          <div><h2>{{ i.prodText }}</h2></div>
+          <div>
+            <h2>{{ i.prodText }}</h2>
+          </div>
         </v-card-text>
 
-        <v-card-subtitle class="textscale"><h1 class="fontcolor">{{ i.priceText }}</h1></v-card-subtitle>
+        <v-card-subtitle class="textscale"
+          ><h1 class="fontcolor">{{ i.priceText }}</h1></v-card-subtitle
+        >
 
         <v-card-actions>
           <v-btn color="info" text :to="'/detail/' + i.id">detail</v-btn>
@@ -24,7 +28,7 @@
       </v-card>
     </v-container>
     <v-container
-      ><h4>Total Amount : {{ total() }} €</h4></v-container
+      ><h4>รวมราคาทั้งหมด : {{ total() }} บาท</h4></v-container
     >
     <v-container grid-list-xs class="dark">
       <router-view :key="$route.path"></router-view>
@@ -38,43 +42,42 @@ export default {
     return {
       productlist: [
         {
-          id:"Item ID: 1068027",
-          imageurl:
-            "https://store.capcom-europe.com/media/image/b0/c6/13/1068027_Monster_Hunter_Wind_Serpent_Ibushi_600x600.webp",
-          priceText: "Price : 30 €",
-          prodText: 'Monster Hunter Rise Chibi Plush "Wind Serpent Ibushi"',
+          id: '-ดอกลิลลี่สีขาว ตัวแทนของ "ความบริสุทธิ์ใจ, ความไร้เดียงสา, ความอ่อนน้อมถ่อมตน"',
+          imageurl: "https://img.kapook.com/u/2019/jutharat/w1/z36_4.jpg",
+          priceText: "ราคา : 20 บาท",
+          prodText: "ดอกลิลลี่สีขาว",
           active: false,
-          price: 30,
+          price: 20,
         },
 
         {
-          id:"Item ID: 1068028",
+          id: 'เป็นดอกไม้ที่บอกเป็นนัยว่า "ขอเป็นชู้ทางใจ" หรือ หมายถึงความสุข สนุกสนาน ร่าเริง',
           imageurl:
-            "https://store.capcom-europe.com/media/image/81/0c/9b/1068028_Monster_Hunter_Thunder_Serpent_Narwa_600x600.webp",
-          priceText: "Price : 30 €",
-          prodText: 'Monster Hunter Rise Chibi Plush "Thunder Serpent Narwa"',
+            "https://s.isanook.com/hm/0/ud/0/3133/istock_000007428513_small.jpg",
+          priceText: "ราคา : 20 บาท",
+          prodText: "ดอกกุหลาบสีเหลือง",
           active: false,
-          price: 30,
+          price: 20,
         },
 
         {
-          id:"Item ID: 1070799",
+          id: "ในด้านความรัก ดอกทานตะวันนั้นสื่อถึงความรักบริสุทธิ์และมั่นคง เหมือนกับไคลทีที่เฝ้ามองเทพอพอลโลไม่ไปไหน ดังนั้นการเรามอบดอกทานตะวันให้ใครจึงหมายถึงการที่เราบอกผู้รับว่า ความรักของฉันที่มีให้เธอจะมั่นคง ไม่เปลี่ยนแปลง เหมือนที่ดอกทานตะวันเฝ้ามองดวงอาทิตย์เสมอไป และนอกจากความหมายซึ้ง ๆ แบบนี้แล้ว ดอกทานตะวันยังใช้สื่อถึงความร่าเริงสดใสและความสุข เหมาะสำหรับมอบให้เป็นของขวัญเพื่ออวยพรให้ผู้รับมีแต่ความสุขและความสดใส",
           imageurl:
-            "https://store.capcom-europe.com/media/image/1a/ee/88/1070799-monster-hunter-statue-palamute-creators-model-5_600x600.webp",
-          priceText: "Price : 190 €",
-          prodText: "Monster Hunter Statue Palamute Creator's Model",
+            "https://www.ikea.com/th/th/images/products/smycka-artificial-flower-sunflower-yellow__0797554_pe767321_s5.jpg?f=s",
+          priceText: "ราคา : 20 บาท",
+          prodText: "ดอกทานตะวัน",
           active: false,
-          price: 190,
+          price: 20,
         },
 
         {
-          id:"Item ID: 1078702",
+          id: "เป็นดอกไม้แห่งคำมั่นสัญญา ความรักความผูกพัน",
           imageurl:
-            "https://store.capcom-europe.com/media/image/41/83/28/1078702-monster-hunter-statue-creators-model-rathian-front_600x600.webp",
-          priceText: "Price : 140 €",
-          prodText: "Monster Hunter Statue Rathian Creator's Model",
+            "https://acsst.files.wordpress.com/2019/01/50553648_2122929084490478_542354017573928960_n.jpg",
+          priceText: "ราคา : 20 บาท",
+          prodText: "แกลดิโอลัส",
           active: false,
-          price: 140,
+          price: 20,
         },
       ],
     };
@@ -97,10 +100,10 @@ export default {
 </script>
 
 <style>
-.textscale{
+.textscale {
   margin-top: 1px;
 }
-.fontcolor{
+.fontcolor {
   font-weight: 1000;
 }
 </style>
